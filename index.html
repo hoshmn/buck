@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>the buck starts here</title>
+  <style type="text/css">
+    body, .mask, .outer-mask, .buck, .buck-inverted {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    em {
+      color: #ee11db;
+    }
+
+    .buck {
+      background: url(lil-buck-pose.jpg) no-repeat center #d4d4d4;
+      /* background: url(JW.jpg) no-repeat center #d4d4d4; */
+      background-size: cover;
+    }
+
+    .buck-inverted {
+      background: url(lil-buck-negative.jpg) no-repeat center #292929;
+      /* background: url(JWI.jpg) no-repeat center #292929; */
+      background-size: cover;
+      animation: opacify 5s infinite;
+    }
+
+    .mask {
+      opacity: inherit;
+      animation: blackwhite 5s infinite;
+    }
+
+    .outer-mask {
+      animation: opacify 10s infinite;
+    }
+
+    .text {
+      visibility: hidden;
+    }
+
+    body:hover .text {
+      visibility: visible;
+    }
+
+    .text > p {
+      position: fixed;
+      color: grey;
+      font-family: monospace;
+      padding: 0;
+      margin: 0;
+    }
+
+    .invite {
+      font-size: 40px;
+      top: 52%;
+      left: 10%;
+      right: 0;
+      text-align: center;
+    }
+
+    .hbd {
+      bottom: 5px;
+      right: 5px;
+      font-size: 14px;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
+
+    @keyframes opacify {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes blackwhite {
+      0% { background-color: white; }
+      50% { background-color: black; }
+      100% { background-color: white; }
+    }
+
+  </style>
+  <script type="text/javascript">
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="buck">
+      <div class="buck-inverted">
+        <div class="outer-mask">
+          <div class="mask"></div>
+        </div>
+      </div>
+    </div>
+    <div class="text">
+      <p class="invite">lil buck | zellerbach 2/25</p>
+      <p class="hbd"><em>/</em> happy holidays emily <em>/</em></p>
+    </div>
+  </div>
+</body>
+
+</html>
